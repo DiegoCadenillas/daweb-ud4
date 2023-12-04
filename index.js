@@ -25,10 +25,41 @@ app.listen(port, () => {
 
 // Definimos una estructura de datos
 // (temporal hasta incorporar una base de datos)
-let coches = [
-  { marca: "Renault", modelo: "Clio" },
-  { marca: "Nissan", modelo: "Skyline R34" },
-];
+// Definición del array de concesionarios
+let concesionarios = [
+  {
+    nombre: "Coches Raúl",
+    direccion: "av. raul 10",
+    coches: [
+      {
+        modelo: "Clio",
+        cv: 440,
+        precio: 2000.00
+      },
+      {
+        modelo: "Prius",
+        cv: 200,
+        precio: 4000.00
+      }
+    ]
+  },
+  {
+    nombre: "Coches Diego",
+    direccion: "av. diego 11",
+    coches: [
+      {
+        modelo: "Prius",
+        cv: 200,
+        precio: 3999.99
+      },
+      {
+        modelo: "Corsa",
+        cv: 300,
+        precio: 10000.00
+      }
+    ]
+  }
+]
 
 // Lista todos los coches
 app.get("/coches", (request, response) => {
